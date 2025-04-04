@@ -93,3 +93,4 @@ The script attempts to detect the path to `adb.exe` automatically. If ADB is not
 If needed, you can manually specify the path to `adb.exe` by updating the fallback path in the script:
 ```powershell
 $fallbackPath = "C:\Path\To\Your\SDK\platform-tools"
+```
