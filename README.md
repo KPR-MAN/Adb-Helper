@@ -1,12 +1,11 @@
+# ADB Helper Script 📱💻
+
+This project provides an easy-to-use PowerShell script that interacts with Android Debug Bridge (ADB) to manage and control Android devices. The script includes various commands to simplify tasks like installing/uninstalling APKs, managing device connections, and rebooting Android devices. It is provided in two versions: as a script and as a converted executable (.exe).
+
 ## Screenshots :
 ![image](https://github.com/user-attachments/assets/42428cc9-cfa2-4a89-a36c-1b6098c264eb)
 
 ![image](https://github.com/user-attachments/assets/d72679f1-e56e-4611-ba7c-2fdd7524a72d)
-
-
-# ADB Helper Script 📱💻
-
-This project provides an easy-to-use PowerShell script that interacts with Android Debug Bridge (ADB) to manage and control Android devices. The script includes various commands to simplify tasks like installing/uninstalling APKs, managing device connections, and rebooting Android devices. It is provided in two versions: as a script and as a converted executable (.exe).
 
 ## Features ✨
 
