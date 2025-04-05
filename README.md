@@ -1,85 +1,83 @@
-# ADB Helper Script 📱💻
+# Adb Helper (GUI) & Adb Helper (Script)
 
-This project provides an easy-to-use PowerShell script that interacts with Android Debug Bridge (ADB) to manage and control Android devices. The script includes various commands to simplify tasks like installing/uninstalling APKs, managing device connections, and rebooting Android devices.
+A user-friendly graphical interface (`Adb Helper (GUI)`) and a command-line script (`Adb Helper (Script)`) for executing common Android Debug Bridge (adb) commands, simplifying interactions with Android devices.
 
-## Screenshots :
-![image](https://github.com/user-attachments/assets/42428cc9-cfa2-4a89-a36c-1b6098c264eb)
+**Repository:** [https://github.com/KPR-MAN/Adb-Helper](https://github.com/KPR-MAN/Adb-Helper)
 
-![image](https://github.com/user-attachments/assets/d72679f1-e56e-4611-ba7c-2fdd7524a72d)
+## GUI ![image](https://github.com/user-attachments/assets/585357aa-77d5-4d87-a030-d7ac5e9774bc)
 
-## Features ✨
+## Script ![image](https://github.com/user-attachments/assets/e2c8213b-7c6f-4741-b5b8-217ce9d59ec2)
 
-The script supports the following commands:
 
-- **Connection Commands:**
-  - `-c` - Connect to device via IP 🌐
-  - `-d` - Disconnect device via IP 🔌
-  - `-t` - Restart ADB in TCP/IP mode on device 🔄
+## Description
 
-- **ADB Server Control:**
-  - `-ss` - Start the ADB server 🚀
-  - `-ks` - Kill the ADB server 🛑
+This repository provides two tools for interacting with Android devices via ADB:
 
-- **Device Management:**
-  - `-r` - Reboot Device (Normal) 🔄
-  - `-rb` - Reboot into Bootloader 🔑
-  - `-rr` - Reboot into Recovery 💊
-  - `-root` - Restart ADB daemon with root permissions 👑
-  - `-re-m` - Remount System Partition (requires root) 🔒
+1.  **`Adb Helper (GUI)`:** A graphical application built with Python and Tkinter (`ttk` themed widgets). It offers a visual way to run ADB commands through buttons and input fields, displaying output directly within the application.
+2.  **`Adb Helper (Script)`:** The original PowerShell command-line script providing similar functionality within a terminal environment.
 
-- **Package Management:**
-  - `-i` - Install APK 📲
-  - `-u` - Uninstall APK ❌
-  - `-da` - Disable App (by package name) 🚫
-  - `-e` - Enable App (by package name) ✅
-  - `-lp` - List Installed Packages 📦
-  - `-lpl` - List Packages with File Locations 📂
+Both tools automatically attempt to detect the ADB installation path.
 
-- **File Management:**
-  - `-pft` - Push File (PC -> Device) 📤
-  - `-ptf` - Pull File (Device -> PC) 📥
+## Features
 
-- **Additional Commands:**
-  - `-lc` - Output device Logcat 📝
-  - `-av` - Show ADB Version 🖥️
-  - `help` - Shows help menu with command descriptions ❓
-  - `clear` - Clears the screen ✨
-  - `exit` - Exits the script 🚪
+*   **Automatic ADB Detection:** Attempts to find `adb.exe` (or `adb`) in the system's PATH, default Android SDK locations, or a fallback path.
+*   **Connection Management:** Connect/disconnect via IP, set TCP/IP mode.
+*   **ADB Server Control:** Start/kill the ADB server.
+*   **Device Information:** Show ADB version, list installed packages (with or without paths).
+*   **Device Interaction:** Start ADB shell (attempts to open in a new console), reboot (Normal, Bootloader, Recovery).
+*   **File Management:** Push/pull files using system file/folder selection dialogs.
+*   **Application Management:** Install APKs (via file dialog), uninstall/disable/enable apps by package name.
+*   **Debugging & Advanced:** ADB root, remount system partition, stream `logcat` into the GUI, stop `logcat` stream.
+*   **Interface:** Clear button layout, dedicated input fields, scrollable/color-coded output area, built-in help, dark theme.
 
-## Requirements 📋
+## Requirements (For GUI Version) - The Script Does Not Require anything unless the adb
 
-- **Windows Operating System** 💻
-- **PowerShell** (for the script version) ⚙️
-- **ADB (Android Debug Bridge)** must be installed and accessible in your system's PATH. The script will attempt to locate ADB in the following locations:
-  1. ADB in your system's PATH 🔍
-  2. Default Android SDK location (`%LOCALAPPDATA%\Android\Sdk\platform-tools`) 📂
-  3. A fallback location (`C:\Users\<username>\AppData\Local\Android\Sdk\platform-tools`) ⚠️
+1.  **Python 3.x:** Required for `Adb Helper (GUI)`. Download from [python.org](https://www.python.org/).
+2.  **Tkinter:** Required for `Adb Helper (GUI)`. Usually included with Python. On some Linux systems, it may need separate installation (e.g., `sudo apt-get update && sudo apt-get install python3-tk`).
+3.  **PowerShell:** Required for `Adb Helper (Script)`. Included with modern Windows versions.
+4.  **Android Debug Bridge (ADB):**
+    *   Required for both tools. Part of the Android SDK Platform Tools. Download from [developer.android.com](https://developer.android.com/studio/releases/platform-tools).
+    *   Ensure the `platform-tools` directory containing `adb` is added to the system's **PATH** environment variable for reliable detection, or that ADB resides in a standard SDK location.
+    *   Verify the ADB installation by opening a terminal/command prompt and running `adb version`.
+    *   
 
-If ADB is not found, the script will notify you to install it or update the fallback path.
+## Installation
 
-## Usage 🚀
+1.  Ensure all **Requirements** are met.
+2.  Clone the repository:
+    ```bash
+    git clone https://github.com/KPR-MAN/Adb-Helper.git
+    cd Adb-Helper
+    ```
+3.  No additional Python package installations are required for the current GUI version.
 
-### Script Version 📝
+## Usage
 
-1. **Download the Script**:  
-   Clone or download the repository.
+### Adb Helper (GUI)
 
-2. **Run the Script**:  
-   Open PowerShell and run the script.
+1.  Navigate to the repository directory in a terminal or command prompt.
+2.  Run the Python script (assuming the Python script file is named `adb_helper_gui.py` - adjust if necessary):
+    ```bash
+    python adb_helper_gui.py
+    ```
+    (Use `python3` if required by the system configuration).
+3.  The `Adb Helper (GUI)` window will open.
+4.  Use the input fields for required information (IP, Port, Package Name, etc.).
+5.  Click the button corresponding to the desired ADB command.
+6.  Observe results and status messages in the output text area.
 
-3. **Execute Commands**:  
-   Once the script is running, you can input commands interactively. Type `help` to see available commands.
+### Adb Helper (Script)
 
-4. **Exit**:  
-   Type `exit` to stop the script.
+1.  Open a PowerShell terminal.
+2.  Navigate to the repository directory.
+3.  Run the script (assuming the PowerShell script file is named `Adb Helper (Script).ps1` - adjust if necessary):
+    ```powershell
+    .\'Adb Helper (Script).ps1'
+    ```
+4.  Follow the prompts within the terminal. Type `help` for available commands within the script's interface.
 
-## Configuration ⚙️
+## Notes
 
-The script attempts to detect the path to `adb.exe` automatically. If ADB is not in the system's PATH, it will try the default SDK location and a fallback directory. If ADB is still not found, the script will display an error message and prompt you to exit.
-
-### Customizing ADB Path 🛠️
-
-If needed, you can manually specify the path to `adb.exe` by updating the fallback path in the script:
-```powershell
-$fallbackPath = "C:\Path\To\Your\SDK\platform-tools"
-```
+*   If ADB is not found automatically, ensure it is correctly installed and accessible via the system's PATH.
+*   The "Start Shell" feature in the GUI attempts to launch a new external terminal window.
+*   The `logcat` command streams output continuously until stopped via the "Stop Logcat" button (GUI) or Ctrl+C (Script, typically).
