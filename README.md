@@ -5,10 +5,10 @@ A user-friendly graphical interface (`Adb Helper (GUI)`) and a command-line scri
 **Repository:** [https://github.com/KPR-MAN/Adb-Helper](https://github.com/KPR-MAN/Adb-Helper)  KPR-MAN/Adb-Helper
 
 ## GUI ✨🖼️
-![image](https://github.com/user-attachments/assets/585357aa-77d5-4d87-a030-d7ac5e9774bc)
+![image](https://github.com/user-attachments/assets/2d599db7-8825-4b02-9b00-210cf728b1d3)
 
 ## Script ⌨️
-![image](https://github.com/user-attachments/assets/e2c8213b-7c6f-4741-b5b8-217ce9d59ec2)
+![image](https://github.com/user-attachments/assets/b7bd4e36-3d31-426e-a89e-5db43290563e)
 
 
 ## Description 📝
