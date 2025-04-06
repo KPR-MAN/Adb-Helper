@@ -1,79 +1,191 @@
-# Adb Helper (GUI) 🎨 & Adb Helper (Script)
+<p align="center">
+  <img src="assets/icon.png" alt="Adb Helper Icon" width="128"/>
+</p>
 
-A user-friendly graphical interface (`Adb Helper (GUI)`) and a command-line script (`Adb Helper (Script)`) for executing common Android Debug Bridge (adb) commands, simplifying interactions with Android devices 📱.
+<h1 align="center">Adb Helper 📱✨</h1>
 
-**Repository:** [https://github.com/KPR-MAN/Adb-Helper](https://github.com/KPR-MAN/Adb-Helper)  KPR-MAN/Adb-Helper
+<p align="center">
+  <strong>A User-Friendly GUI & Script for Android ADB Commands</strong>
+</p>
 
-## GUI ✨🖼️
-![image](https://github.com/user-attachments/assets/2d599db7-8825-4b02-9b00-210cf728b1d3)
+<p align="center">
+  <!-- Version Badge -->
+  <a href="https://github.com/KPR-MAN/Adb-Helper/releases">
+    <img src="https://img.shields.io/github/v/release/KPR-MAN/Adb-Helper?display_name=tag&sort=semver&logo=github" alt="Version 1.1">
+  </a>
+  <!-- License Badge -->
+  <a href="https://www.gnu.org/licenses/gpl-3.0">
+    <img src="https://img.shields.io/badge/License-GPLv3-blue.svg?logo=gnu" alt="License: GPL v3">
+  </a>
+  <!-- Open Source Badge -->
+  <a href="https://opensource.org/">
+    <img src="https://img.shields.io/badge/Open_Source-%E2%9C%93-brightgreen?logo=opensourceinitiative" alt="Open Source">
+  </a>
+  <!-- GitHub Stars Badge -->
+  <a href="https://github.com/KPR-MAN/Adb-Helper">
+    <img src="https://img.shields.io/github/stars/KPR-MAN/Adb-Helper?style=social" alt="GitHub stars">
+  </a>
+  <!-- Python and PowerShell Badges -->
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python 3.x">
+  <img src="https://img.shields.io/badge/PowerShell-Core-blueviolet?logo=powershell" alt="PowerShell Core Compatible">
+</p>
 
-## Script ⌨️
-![image](https://github.com/user-attachments/assets/b7bd4e36-3d31-426e-a89e-5db43290563e)
+<p align="center">
+  Tired of typing repetitive <code>adb</code> commands? Need a simpler way to interact with your Android device? <br />
+  <strong>Adb Helper</strong> offers both a Graphical Interface (GUI) and a Command-Line Script to streamline your ADB workflow!
+</p>
 
+## 🤔 Why Adb Helper?
 
-## Description 📝
+*   🚀 **Boost Productivity:** Execute common ADB commands with a single click or simple input.
+*   ✅ **Reduce Errors:** Avoid typos in complex commands.
+*   🤩 **User-Friendly:** Choose between an intuitive GUI or a powerful script.
+*   📊 **Visual Feedback:** See command output clearly (GUI) or directly in your terminal (Script).
+*   🔍 **Smart ADB Detection:** Automatically finds your ADB installation in common locations.
+*   💾 **Easy File Transfers:** Push/pull files and folders effortlessly.
 
-This repository provides two tools for interacting with Android devices via ADB:
+---
 
-1.  **`Adb Helper (GUI)` 🎨🐍:** A graphical application built with Python and Tkinter (`ttk` themed widgets). It offers a visual way to run ADB commands through buttons and input fields, displaying output directly within the application.
-2.  **`Adb Helper (Script)` ⌨️:** The original PowerShell command-line script providing similar functionality within a terminal environment.
+## ✨ Features
 
-Both tools automatically attempt to detect the ADB installation path 🔍.
+Adb Helper provides two ways to simplify your ADB tasks:
 
-## ✨ Features ✨
+**1. Adb Helper (GUI) 🎨 (Python/Tkinter)**
+*   Visual interface with buttons for common tasks.
+*   Real-time output display within the app.
+*   File/folder selection using system dialogs.
+*   Built-in Dark Theme toggle. 🌙
+*   Ideal for users who prefer a graphical workflow.
 
-*   ✅ **Automatic ADB Detection:** Attempts to find `adb.exe` (or `adb`) in the system's PATH, default Android SDK locations, or a fallback path.
-*   ✅ **Connection Management:** Connect/disconnect via IP, set TCP/IP mode.
-*   ✅ **ADB Server Control:** Start/kill the ADB server.
-*   ✅ **Device Information:** Show ADB version, list installed packages (with or without paths).
-*   ✅ **Device Interaction:** Start ADB shell (attempts to open in a new console), reboot (Normal, Bootloader, Recovery).
-*   ✅ **File Management:** Push/pull files using system file/folder selection dialogs 📥📤.
-*   ✅ **Application Management:** Install APKs (via file dialog), uninstall/disable/enable apps by package name 📦.
-*   ✅ **Debugging & Advanced:** ADB root, remount system partition, stream `logcat` into the GUI 📊, stop `logcat` stream 🛑.
-*   ✅ **Interface:** Clear button layout, dedicated input fields, scrollable/color-coded output area, built-in help 💡, dark theme 🌙.
+**2. Adb Helper (Script) ⌨️ (PowerShell)**
+*   Menu-driven interface within your terminal.
+*   Automates commands via simple text input.
+*   Suitable for scripting and command-line users.
+*   Cross-platform potential with PowerShell Core.
 
-*   ⚠️ Some features aren't available in script version...
+**Core Functionality (Both Tools):**
 
-## ⚙️ Requirements (For GUI Version) ⚙️
-*(The Script only requires ADB installed and accessible)*
+*   🔗 **Connection:** Connect/disconnect via IP, enable TCP/IP.
+*   🔌 **Server Control:** Start/kill the ADB server.
+*   ℹ️ **Device Info:** Get ADB version, list devices, list packages.
+*   🔄 **Reboot Options:** Normal, Bootloader, Recovery.
+*   셸 **ADB Shell Access:** Quickly open a shell.
+*   📂 **File Management:** Push/Pull files & folders.
+*   📦 **App Management:** Install APKs, Uninstall, Enable/Disable apps.
+*   🛠️ **Advanced:** `adb root`, `remount`, `logcat` streaming (with stop).
 
-1.  🐍 **Python 3.x:** Required for `Adb Helper (GUI)`. Download from [python.org](https://www.python.org/).
-2.  🎨 **Tkinter:** Required for `Adb Helper (GUI)`. Usually included with Python. On some Linux systems, it may need separate installation (e.g., `sudo apt-get update && sudo apt-get install python3-tk`).
-3.  ⌨️ **PowerShell:** Required for `Adb Helper (Script)`. Included with modern Windows versions.
-4.  🤖 **Android Debug Bridge (ADB):**
-    *   Required for both tools ✅. Part of the Android SDK Platform Tools. Download from [developer.android.com](https://developer.android.com/studio/releases/platform-tools).
-    *   Ensure the `platform-tools` directory containing `adb` is added to the system's **PATH** environment variable 🌐 for reliable detection, or that ADB resides in a standard SDK location.
-    *   Verify the ADB installation by opening a terminal/command prompt and running `adb version` ➡️💻.
+*(See the code or run the tools for the full list of specific commands!)*
 
-## 🚀 Installation 🚀
+---
 
-1.  Ensure all **Requirements** are met ✅.
-2.  📦 Clone the repository:
+## ✨ Sneak Peek
+
+### Adb Helper (GUI) 🖼️
+*A clean interface to manage your device visually.*
+![GUI Screenshot](https://github.com/user-attachments/assets/2d599db7-8825-4b02-9b00-210cf728b1d3)
+
+### Adb Helper (Script) ⌨️
+*Control ADB directly from your PowerShell terminal.*
+![Script Screenshot](https://github.com/user-attachments/assets/b7bd4e36-3d31-426e-a89e-5db43290563e)
+
+---
+
+## ⚙️ Requirements
+
+**Essential for Both:**
+
+1.  🤖 **Android Debug Bridge (ADB):**
+    *   Download from the official [Android SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools).
+    *   **‼️ CRITICAL:** Add the `platform-tools` directory containing `adb.exe` (Windows) or `adb` (Linux/macOS) to your system's **`PATH`** environment variable.
+    *   Verify by opening a *new* terminal/cmd and typing `adb version`. It should output the version number.
+
+**Tool Specific:**
+
+*   **For `Adb Helper (GUI)` 🎨🐍:**
+    *   **Python 3.x:** Install from [python.org](https://www.python.org/). (Tkinter is usually included; install `python3-tk` on some Linux distros if needed).
+*   **For `Adb Helper (Script)` ⌨️:**
+    *   **PowerShell:** Included in modern Windows. Install [PowerShell Core](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) for Linux/macOS.
+
+---
+
+## 🚀 Getting Started (Quick Start)
+
+1.  **Install Requirements:** Make sure you have ADB (with PATH set!), and Python (for GUI) or PowerShell (for Script).
+2.  **Get the Code:**
     ```bash
+    # Clone the repository
     git clone https://github.com/KPR-MAN/Adb-Helper.git
+    # Navigate into the directory
     cd Adb-Helper
     ```
-3.  No additional Python package installations are required for the current GUI version 👍.
+    *(Alternatively, download and extract the ZIP from the GitHub page.)*
+3.  **Ready to Run!** No extra Python packages (`pip install`) needed for the GUI.
 
-Or download the file directly...
+---
 
-## ▶️ Usage ▶️
+## ▶️ How to Use
 
-### Adb Helper (GUI) 🎨
+### Using the GUI 🎨
 
-1.  Navigate to the repository directory in a file explorer 📁.
-2.  Click on the python file `Adb Helper (GUI)` 🖱️.
-3.  Follow the GUI for how to use... 👉
+1.  Go to the `Adb-Helper` folder.
+2.  Run the Python script:
+    *   **Windows:** Double-click `Adb Helper (GUI).py` or run `python "Adb Helper (GUI).py"` in CMD/PowerShell.
+    *   **Linux/macOS:** Run `python3 "Adb Helper (GUI).py"` in the terminal.
+3.  Use the buttons and input fields. Output appears in the bottom text area.
 
-### Adb Helper (Script)
+### Using the Script ⌨️
 
-1.  Navigate to the repository directory in a file explorer 📁.
-2.  Right Click on the script file `Adb Helper (Script)` 🖱️.
-3.  Select `Run With PowerShell` in the right click menu ✅.
-4.  Follow the prompts within the terminal. Type `help` for available commands within the script's interface... 💡
+1.  Go to the `Adb-Helper` folder.
+2.  Open PowerShell in that directory (e.g., `Shift + Right-click` -> "Open PowerShell window here" on Windows).
+3.  Execute the script:
+    ```powershell
+    .\Adb Helper (Script).ps1
+    ```
+    *(**Note:** You might need to adjust PowerShell's execution policy. Try `Set-ExecutionPolicy RemoteSigned -Scope Process` for the current session if you get an error. Be mindful of security implications.)*
+4.  Follow the menu prompts. Type `help` for available commands within the script.
 
-## 📌 Notes 📌
+---
 
-*   If ADB is not found automatically ❓, ensure it is correctly installed and accessible via the system's PATH ⚠️.
-*   The "Start Shell" feature in the GUI attempts to launch a new external terminal window 💻.
-*   The `logcat` command streams output continuously 📊 until stopped via the "Stop Logcat" button (GUI) 🛑 or Ctrl+C (Script, typically).
+## 🤝 Contributing
+
+**We welcome contributions!** Help make Adb Helper even better.
+
+**Ways to Contribute:**
+
+*   🐛 Report Bugs: Create an issue detailing the problem.
+*   💡 Suggest Features: Open an issue to discuss new ideas.
+*   ✨ Submit Pull Requests (PRs):
+    1.  **Fork** the repository.
+    2.  Create a new **Branch** (`git checkout -b feature/my-idea` or `fix/bug-name`).
+    3.  Make your **Changes**.
+    4.  **Test** thoroughly.
+    5.  **Commit** with clear messages.
+    6.  **Push** to your fork.
+    7.  Open a **Pull Request** back to the main `KPR-MAN/Adb-Helper` repository.
+
+**License Note:** By contributing, you agree that your contributions will be licensed under the project's GPLv3 License.
+
+*Looking forward to your contributions!*
+
+---
+
+## 📜 License
+
+This project is licensed under the **GNU General Public License v3.0 (GPLv3)**.
+
+You are free to Share and Adapt the code, provided you maintain Attribution and ShareAlike under the same license.
+
+See the [LICENSE](LICENSE) file (you should create this file containing the GPLv3 text) for full details, or visit [gnu.org](https://www.gnu.org/licenses/gpl-3.0.html).
+
+---
+
+## 📌 Troubleshooting & Notes
+
+*   **"ADB Not Found" Error:** This is common! **RE-CHECK** that the `platform-tools` folder is correctly added to your system `PATH`. **Restart** terminals or the GUI after updating the `PATH`. Test with `adb version` in a *new* terminal.
+*   **PowerShell Script Execution Policy:** If the `.ps1` script won't run on Windows, see the note in the [How to Use](#user-content-using-the-script-%EF%B8%8F) section about `Set-ExecutionPolicy`. *(Self-correction: Need to update this link too)*
+*   **GUI "Start Shell":** Tries to open `adb shell` in a new, separate terminal window. Behavior might vary by OS.
+*   **Stopping `logcat`:** Use the "Stop Logcat" button (GUI) or press `Ctrl+C` (Script).
+
+---
+
+<p align="center">Happy Adb-ing! 🎉</p>
