@@ -54,14 +54,17 @@ Adb Helper provides two ways to simplify your ADB tasks:
 *   Visual interface with buttons for common tasks.
 *   Real-time output display within the app.
 *   File/folder selection using system dialogs.
-*   Built-in Dark Theme toggle. 🌙
+*   Easy to use
 *   Ideal for users who prefer a graphical workflow.
 
+*   After opening press "Help" to know other features and know what you can do with the tool.
+
 **2. Adb Helper (Script) ⌨️ (PowerShell)**
-*   Menu-driven interface within your terminal.
+*   It do the same as the GUI version but with simple text.
 *   Automates commands via simple text input.
 *   Suitable for scripting and command-line users.
-*   Cross-platform potential with PowerShell Core.
+
+*   After opening write command "Help" to know other features and know what you can do with the tool.
 
 **Core Functionality (Both Tools):**
 
@@ -175,7 +178,7 @@ This project is licensed under the **GNU General Public License v3.0 (GPLv3)**.
 
 You are free to Share and Adapt the code, provided you maintain Attribution and ShareAlike under the same license.
 
-See the [LICENSE](LICENSE) file (you should create this file containing the GPLv3 text) for full details, or visit [gnu.org](https://www.gnu.org/licenses/gpl-3.0.html).
+Visit the [gnu.org](https://www.gnu.org/licenses/gpl-3.0.html) for full details .
 
 ---
 
@@ -185,7 +188,7 @@ See the [LICENSE](LICENSE) file (you should create this file containing the GPLv
 *   **PowerShell Script Execution Policy:** If the `.ps1` script won't run on Windows, see the note in the [How to Use](#user-content-using-the-script-%EF%B8%8F) section about `Set-ExecutionPolicy`. *(Self-correction: Need to update this link too)*
 *   **GUI "Start Shell":** Tries to open `adb shell` in a new, separate terminal window. Behavior might vary by OS.
 *   **Stopping `logcat`:** Use the "Stop Logcat" button (GUI) or press `Ctrl+C` (Script).
-*   If the Gui can't open or crashes: Make sure the Adb Helper (GUI).py and icon.png are in one folder
+*   If the Gui can't open or crashes: Make sure the icon.png are in the assets folder.
 
 ---
 
