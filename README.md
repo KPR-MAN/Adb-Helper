@@ -185,7 +185,8 @@ See the [LICENSE](LICENSE) file (you should create this file containing the GPLv
 *   **PowerShell Script Execution Policy:** If the `.ps1` script won't run on Windows, see the note in the [How to Use](#user-content-using-the-script-%EF%B8%8F) section about `Set-ExecutionPolicy`. *(Self-correction: Need to update this link too)*
 *   **GUI "Start Shell":** Tries to open `adb shell` in a new, separate terminal window. Behavior might vary by OS.
 *   **Stopping `logcat`:** Use the "Stop Logcat" button (GUI) or press `Ctrl+C` (Script).
+*   If the Gui can't open or crashes: Make sure the Adb Helper (GUI).py and icon.png are in one folder
 
 ---
 
-<p align="center">Happy Adb-ing! 🎉</p>
+<p align="center">Happy Coding! 🎉</p>
