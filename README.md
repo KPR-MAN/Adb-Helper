@@ -85,7 +85,8 @@ Adb Helper provides two ways to simplify your ADB tasks:
 
 ### Adb Helper (GUI) 🖼️
 *A clean interface to manage your device visually.*
-![GUI Screenshot](https://github.com/user-attachments/assets/2d599db7-8825-4b02-9b00-210cf728b1d3)
+![GUI Screenshot](https://github.com/user-attachments/assets/016fe6b7-0794-4981-8e74-d98819737e15)
+
 
 ### Adb Helper (Script) ⌨️
 *Control ADB directly from your PowerShell terminal.*
